@@ -1,3 +1,7 @@
+# What I Would Do If I Had More Time
+
+If I had more time to work on this application, I would add more efficient error handling so that if any of the requests fail, it shows the user a "toast-like notification." Additionally, I would implement pagination to display a certain number of events per page. Furthermore, I would include a hover effect, whereby when the user hovers over an event, it will show them the description of it.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
