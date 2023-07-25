@@ -32,7 +32,6 @@ function App() {
   };
 
   const getTokenAndFetchEvents = async (month) => {
-    console.log("URL ", `${process.env.REACT_APP_BASE_URL}/auth`);
     try {
       const tokenResponse = await axios.post(
         `${process.env.REACT_APP_BASE_URL}/auth`,
@@ -82,13 +81,18 @@ function App() {
           showMonthYearPicker
         />
       </div>
-      <ul>
-        {events.map((event) => (
-          <Event key={event.id} event={event} />
-        ))}
-      </ul>
+      {events.length > 0 ? (
+        <ul className="event-grid">
+          {events.map((event) => (
+            <Event key={event.id} event={event} />
+          ))}
+        </ul>
+      ) : (
+        <p className="no-events-message">No events found.</p>
+      )}
     </div>
   );
 }
+
 
 export default App;
